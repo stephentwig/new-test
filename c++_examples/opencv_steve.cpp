@@ -2,9 +2,19 @@
 using namespace cv;
 
 int main() {
-    Mat img = imread("idtech_bg_1.png");
-    if (img.empty()) return -1;
+    CascadeClassifier face_cascade;
+    face_cascade.load("haarcascade_frontalface_default.xml");
 
-    imwrite("output.jpg", img);
+    Mat img = imread("groupPicture.png");
+    Mat gray;
+    cvtColor(img, gray, COLOR_BGR2GRAY);
+
+    std::vector<Rect> faces;
+    face_cascade.detectMultiScale(gray, faces);
+
+    for (auto face : faces)
+        rectangle(img, face, Scalar(0,255,0), 2);
+
+    imwrite("faces.jpg", img);
     return 0;
 }
