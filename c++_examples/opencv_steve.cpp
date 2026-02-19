@@ -5,7 +5,7 @@ int main() {
     CascadeClassifier face_cascade;
     face_cascade.load("haarcascade_frontalface_default.xml");
 
-    Mat img = imread("groupPicture.png");
+    Mat img = imread("/workspaces/new-test/c++_examples/group_picture.jpg");
     Mat gray;
     cvtColor(img, gray, COLOR_BGR2GRAY);
 
