@@ -3,3 +3,5 @@ g++ -g /workspaces/new-test/firstopencv.cpp -o /workspaces/new-test/firstopencv 
 g++ -g /workspaces/new-test/c++_examples/opencv_steve.cpp -o /workspaces/new-test/c++_examples/opencv_steve $(pkg-config --cflags --libs opencv4)
 
 g++ -g /workspaces/new-test/c++_examples/opencv_steve.cpp -o /workspaces/new-test/c++_examples/opencv_steve $(pkg-config --cflags --libs opencv4)
+
+g++ -g /workspaces/new-test/c++_examples/main.cpp -o /workspaces/new-test/c++_examples/main $(pkg-config --cflags --libs opencv4)
